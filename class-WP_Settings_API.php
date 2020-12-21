@@ -486,6 +486,14 @@ if ( !class_exists( 'WP_Settings_API' ) ) {
         }
 
         /**
+         * Show Option Page Title
+         */
+        function show_page_title() {
+            $html = '<h1 class="option-page-title">' . get_admin_page_title() . '</h1>';
+            echo $html;
+        }
+
+        /**
          * Show navigations as tab
          *
          * Shows all the settings section labels as tab

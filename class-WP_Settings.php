@@ -23,10 +23,7 @@ if ( ! class_exists( 'WP_Settings' ) ):
         }
 
         function admin_menu() {
-            add_options_page( 'WP Settings Page', 'WP Settings Page', 'manage_options', 'settings_page_test', array(
-                $this,
-                'plugin_page'
-            ) );
+            add_menu_page( 'WP Settings Page', 'WP Settings Page', 'edit_theme_options', 'settings_page_test', array( $this, 'plugin_page' ), 'dashicons-admin-generic', 32 );
         }
 
         function get_settings_sections() {
